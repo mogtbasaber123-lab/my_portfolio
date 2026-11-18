@@ -81,10 +81,12 @@ class _CourseHoverCardState extends State<_CourseHoverCard> {
   Widget build(BuildContext context) {
     final course = widget.course;
 
-    return MouseRegion(
-      onEnter: (_) => setState(() => isHovered = true),
-      onExit: (_) => setState(() => isHovered = false),
-      child: AnimatedContainer(
+    return GestureDetector(
+      onTap: () => setState(() => isHovered = !isHovered),
+      child: MouseRegion(
+        onEnter: (_) => setState(() => isHovered = true),
+        onExit: (_) => setState(() => isHovered = false),
+        child: AnimatedContainer(
         duration: const Duration(milliseconds: 250),
         curve: Curves.easeOut,
         transform: isHovered
@@ -177,7 +179,7 @@ class _CourseHoverCardState extends State<_CourseHoverCard> {
                       Row(
                         children: [
                           const Text(
-                            "Hover to explore concepts",
+                            "Tap or hover to explore concepts",
                             style: TextStyle(
                               fontSize: 12,
                               color: AppColors.textMuted,
@@ -290,8 +292,9 @@ class _CourseHoverCardState extends State<_CourseHoverCard> {
           ),
         ),
       ),
-    );
-  }
+    ),
+  );
+}
 
   Widget _buildCourseBrandLogo(CourseModel course) {
     switch (course.id) {

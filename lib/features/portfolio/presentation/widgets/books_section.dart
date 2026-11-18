@@ -84,10 +84,12 @@ class _BookCoverHoverCardState extends State<_BookCoverHoverCard> {
   Widget build(BuildContext context) {
     final book = widget.book;
 
-    return MouseRegion(
-      onEnter: (_) => setState(() => isHovered = true),
-      onExit: (_) => setState(() => isHovered = false),
-      child: AnimatedContainer(
+    return GestureDetector(
+      onTap: () => setState(() => isHovered = !isHovered),
+      child: MouseRegion(
+        onEnter: (_) => setState(() => isHovered = true),
+        onExit: (_) => setState(() => isHovered = false),
+        child: AnimatedContainer(
         duration: const Duration(milliseconds: 300),
         curve: Curves.easeOutCubic,
         transform: isHovered
@@ -214,8 +216,9 @@ class _BookCoverHoverCardState extends State<_BookCoverHoverCard> {
           ),
         ),
       ),
-    );
-  }
+    ),
+  );
+}
 
   /// Styled 3D Cover Fallback if network image is loading or unavailable
   Widget _buildFallbackCover(BookModel book) {
