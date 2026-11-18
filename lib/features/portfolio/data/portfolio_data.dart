@@ -300,7 +300,7 @@ class PortfolioData {
     ),
   ];
 
-  // 3. Books Read Data (Exact 4 Books with Universal CORS Cover URLs)
+  // 3. Books Read Data (Exact 4 Books with Local Asset Cover Paths)
   static const List<BookModel> books = [
     BookModel(
       title: "Discovering Computers 2018: Digital Technology, Data, and Devices",
@@ -309,8 +309,7 @@ class PortfolioData {
       summary:
           "A comprehensive introduction to modern computing concepts, digital technologies, hardware, software, and how devices interact in a connected world.",
       icon: Icons.computer_rounded,
-      coverUrl:
-          "https://m.media-amazon.com/images/I/81+m4+hOqFL._AC_UF1000,1000_QL80_.jpg",
+      coverUrl: "assets/images/Book3.png",
       coverColor: Color(0xFFE76F51),
     ),
     BookModel(
@@ -319,8 +318,7 @@ class PortfolioData {
       summary:
           "A foundational guide covering essential software engineering principles, system modeling, architectural design, agile development, and software testing.",
       icon: Icons.school_rounded,
-      coverUrl:
-          "https://m.media-amazon.com/images/I/71u9s9m1A5L._AC_UF1000,1000_QL80_.jpg",
+      coverUrl: "assets/images/Book1.png",
       coverColor: Color(0xFF02569B),
     ),
     BookModel(
@@ -329,8 +327,7 @@ class PortfolioData {
       summary:
           "A practical manual on writing readable, maintainable, and efficient code, emphasizing best practices for naming, functions, formatting, and refactoring.",
       icon: Icons.auto_stories_rounded,
-      coverUrl:
-          "https://m.media-amazon.com/images/I/41xShlnTZTL._AC_UF1000,1000_QL80_.jpg",
+      coverUrl: "assets/images/Book4.png",
       coverColor: Color(0xFF00B4D8),
     ),
     BookModel(
@@ -339,8 +336,7 @@ class PortfolioData {
       summary:
           "Explores the fundamental laws of software design, focusing on reducing complexity and making smart architectural decisions that keep codebases easy to maintain over time.",
       icon: Icons.lightbulb_rounded,
-      coverUrl:
-          "https://m.media-amazon.com/images/I/513fC3iEhhL._AC_UF1000,1000_QL80_.jpg",
+      coverUrl: "assets/images/Book2.png",
       coverColor: Color(0xFF10B981),
     ),
   ];
