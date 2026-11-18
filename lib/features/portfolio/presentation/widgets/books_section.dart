@@ -106,14 +106,21 @@ class _BookCoverHoverCardState extends State<_BookCoverHoverCard> {
             borderRadius: BorderRadius.circular(22),
             child: Stack(
               children: [
-                // 1. Default State: Full Book Cover Image (Fills the card)
+                // 1. Default State: Full Book Cover Image (Supports Local Assets & Network URLs)
                 Positioned.fill(
-                  child: Image.network(
-                    book.coverUrl,
-                    fit: BoxFit.cover,
-                    errorBuilder: (context, error, stackTrace) =>
-                        _buildFallbackCover(book),
-                  ),
+                  child: book.coverUrl.startsWith('http')
+                      ? Image.network(
+                          book.coverUrl,
+                          fit: BoxFit.cover,
+                          errorBuilder: (context, error, stackTrace) =>
+                              _buildFallbackCover(book),
+                        )
+                      : Image.asset(
+                          book.coverUrl,
+                          fit: BoxFit.cover,
+                          errorBuilder: (context, error, stackTrace) =>
+                              _buildFallbackCover(book),
+                        ),
                 ),
 
                 // 2. Translucent Dark Hover Overlay (Slides up on Hover)
