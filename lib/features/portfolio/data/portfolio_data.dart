@@ -127,14 +127,12 @@ class VolunteeringModel {
 /// Hobby & Interest model.
 class HobbyModel {
   final String title;
-  final String titleArabic;
   final String description;
   final IconData icon;
   final Color accentColor;
 
   const HobbyModel({
     required this.title,
-    required this.titleArabic,
     required this.description,
     required this.icon,
     required this.accentColor,
@@ -179,7 +177,7 @@ class PortfolioData {
   static const List<EducationModel> educationList = [
     EducationModel(
       degree: "B.Sc. in Software Engineering",
-      institution: "Nile University (جامعة النيل)",
+      institution: "Nile University",
       status: "Currently Pursuing",
       description:
           "Specializing in Software Engineering principles, Algorithms, Data Structures, Object-Oriented Software Design, and Mobile Application Engineering.",
@@ -443,7 +441,6 @@ class PortfolioData {
   static const List<HobbyModel> hobbies = [
     HobbyModel(
       title: "Listening to Podcasts",
-      titleArabic: "سماع البودكاست",
       description:
           "Tuning into tech podcasts, software engineering discussions, and personal growth talks.",
       icon: Icons.podcasts_rounded,
@@ -451,7 +448,6 @@ class PortfolioData {
     ),
     HobbyModel(
       title: "Reading Books",
-      titleArabic: "قراءة الكتب",
       description:
           "Exploring foundational computer science literature, software craftsmanship, and algorithm guides.",
       icon: Icons.auto_stories_rounded,
@@ -459,7 +455,6 @@ class PortfolioData {
     ),
     HobbyModel(
       title: "Programming & Coding",
-      titleArabic: "البرمجة",
       description:
           "Building hands-on mobile applications, experimenting with Flutter packages, and writing clean code.",
       icon: Icons.terminal_rounded,
@@ -467,7 +462,6 @@ class PortfolioData {
     ),
     HobbyModel(
       title: "Trying New Things",
-      titleArabic: "تجربة أشياء جديدة",
       description:
           "Continuously exploring new tools, UI design paradigms, and emerging tech stacks.",
       icon: Icons.explore_rounded,
@@ -475,7 +469,6 @@ class PortfolioData {
     ),
     HobbyModel(
       title: "Volunteering Work",
-      titleArabic: "المشاركة في العمل التطوعي",
       description:
           "Contributing time and tech skills to empower non-profits and community initiatives.",
       icon: Icons.volunteer_activism_rounded,

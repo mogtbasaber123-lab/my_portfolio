@@ -101,41 +101,20 @@ class _HobbyCardState extends State<_HobbyCard> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Container(
-                    padding: const EdgeInsets.all(12),
-                    decoration: BoxDecoration(
-                      color: hobby.accentColor.withValues(alpha: 0.2),
-                      borderRadius: BorderRadius.circular(14),
-                      border: Border.all(
-                        color: hobby.accentColor.withValues(alpha: 0.4),
-                      ),
-                    ),
-                    child: Icon(
-                      hobby.icon,
-                      color: hobby.accentColor,
-                      size: 24,
-                    ),
+              Container(
+                padding: const EdgeInsets.all(12),
+                decoration: BoxDecoration(
+                  color: hobby.accentColor.withValues(alpha: 0.2),
+                  borderRadius: BorderRadius.circular(14),
+                  border: Border.all(
+                    color: hobby.accentColor.withValues(alpha: 0.4),
                   ),
-                  Container(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 10, vertical: 4),
-                    decoration: BoxDecoration(
-                      color: AppColors.surfaceLight,
-                      borderRadius: BorderRadius.circular(12),
-                    ),
-                    child: Text(
-                      hobby.titleArabic,
-                      style: TextStyle(
-                        color: hobby.accentColor,
-                        fontSize: 12,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ),
-                ],
+                ),
+                child: Icon(
+                  hobby.icon,
+                  color: hobby.accentColor,
+                  size: 24,
+                ),
               ),
               const SizedBox(height: 16),
 
