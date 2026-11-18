@@ -201,7 +201,7 @@ class PortfolioData {
     ),
   ];
 
-  // 2. Courses & Technologies Learned (5 Interactive Hover Cards with Official Brand Logos)
+  // 2. Courses & Technologies Learned (5 Interactive Hover Cards with Local Brand Logo Assets)
   static const List<CourseModel> courses = [
     CourseModel(
       id: "java",
@@ -219,8 +219,7 @@ class PortfolioData {
       themeColor: Color(0xFFE76F51),
       backgroundImageUrl:
           "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=800&auto=format&fit=crop",
-      logoUrl:
-          "https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.png",
+      logoUrl: "assets/images/Java.png",
     ),
     CourseModel(
       id: "dart",
@@ -238,8 +237,7 @@ class PortfolioData {
       themeColor: Color(0xFF00B4D8),
       backgroundImageUrl:
           "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop",
-      logoUrl:
-          "https://raw.githubusercontent.com/devicons/devicon/master/icons/dart/dart-original.png",
+      logoUrl: "assets/images/Dart.png",
     ),
     CourseModel(
       id: "flutter",
@@ -257,8 +255,7 @@ class PortfolioData {
       themeColor: Color(0xFF02569B),
       backgroundImageUrl:
           "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=800&auto=format&fit=crop",
-      logoUrl:
-          "https://raw.githubusercontent.com/devicons/devicon/master/icons/flutter/flutter-original.png",
+      logoUrl: "assets/images/Flutter.png",
     ),
     CourseModel(
       id: "firebase",
@@ -276,8 +273,7 @@ class PortfolioData {
       themeColor: Color(0xFFFFB703),
       backgroundImageUrl:
           "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=800&auto=format&fit=crop",
-      logoUrl:
-          "https://raw.githubusercontent.com/devicons/devicon/master/icons/firebase/firebase-plain.png",
+      logoUrl: "assets/images/Firebase.png",
     ),
     CourseModel(
       id: "hive",
@@ -295,8 +291,7 @@ class PortfolioData {
       themeColor: Color(0xFF2A9D8F),
       backgroundImageUrl:
           "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=800&auto=format&fit=crop",
-      logoUrl:
-          "https://raw.githubusercontent.com/hivedb/hive/master/site/static/img/hive.png",
+      logoUrl: "assets/images/Hive.png",
     ),
   ];
 

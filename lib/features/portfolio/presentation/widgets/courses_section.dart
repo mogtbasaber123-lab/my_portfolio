@@ -297,6 +297,31 @@ class _CourseHoverCardState extends State<_CourseHoverCard> {
 }
 
   Widget _buildCourseBrandLogo(CourseModel course) {
+    if (course.logoUrl.isNotEmpty) {
+      if (course.logoUrl.startsWith('http')) {
+        return Image.network(
+          course.logoUrl,
+          width: 32,
+          height: 32,
+          fit: BoxFit.contain,
+          errorBuilder: (context, error, stackTrace) =>
+              _fallbackBrandIcon(course),
+        );
+      } else {
+        return Image.asset(
+          course.logoUrl,
+          width: 32,
+          height: 32,
+          fit: BoxFit.contain,
+          errorBuilder: (context, error, stackTrace) =>
+              _fallbackBrandIcon(course),
+        );
+      }
+    }
+    return _fallbackBrandIcon(course);
+  }
+
+  Widget _fallbackBrandIcon(CourseModel course) {
     switch (course.id) {
       case 'java':
         return BrandIcons.java(size: 32);
@@ -309,16 +334,10 @@ class _CourseHoverCardState extends State<_CourseHoverCard> {
       case 'hive':
         return BrandIcons.hive(size: 32);
       default:
-        return Image.network(
-          course.logoUrl,
-          width: 32,
-          height: 32,
-          fit: BoxFit.contain,
-          errorBuilder: (context, error, stackTrace) => Icon(
-            course.icon,
-            color: course.themeColor,
-            size: 30,
-          ),
+        return Icon(
+          course.icon,
+          color: course.themeColor,
+          size: 30,
         );
     }
   }
