@@ -15,56 +15,105 @@
   }
 }
 
-/* Custom Glassmorphism styles matching Flutter AppColors glass parameters */
+/* Glass Panel Styling */
 .glass-panel {
-  background: rgba(15, 23, 42, 0.65);
+  background: rgba(15, 23, 42, 0.7);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(56, 189, 248, 0.2);
+  border: 1px solid rgba(56, 189, 248, 0.22);
 }
 
+/* Glass Card Premium Styling & 3D Hover Scale */
 .glass-card {
-  background: rgba(18, 27, 45, 0.75);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border: 1px solid rgba(56, 189, 248, 0.18);
-  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  background: linear-gradient(135deg, rgba(18, 27, 45, 0.85) 0%, rgba(10, 14, 23, 0.75) 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(56, 189, 248, 0.16);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, box-shadow, border-color;
+}
+
+.glass-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.08),
+    transparent
+  );
+  transform: skewX(-20deg);
+  transition: 0.75s;
+  pointer-events: none;
+}
+
+.glass-card:hover::before {
+  left: 150%;
 }
 
 .glass-card:hover {
-  border-color: rgba(56, 189, 248, 0.5);
-  box-shadow: 0 14px 36px -12px rgba(56, 189, 248, 0.3);
-  transform: translateY(-6px) scale(1.01);
+  border-color: rgba(56, 189, 248, 0.55);
+  box-shadow: 0 20px 45px -15px rgba(56, 189, 248, 0.35), 0 0 20px 2px rgba(2, 86, 155, 0.25);
+  transform: translateY(-8px) scale(1.02);
 }
 
+/* Glass Button Shimmer Effects */
 .glass-button {
+  position: relative;
+  overflow: hidden;
   background: rgba(56, 189, 248, 0.1);
   border: 1px solid rgba(56, 189, 248, 0.3);
-  backdrop-filter: blur(10px);
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  backdrop-filter: blur(12px);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .glass-button:hover {
   background: rgba(56, 189, 248, 0.22);
   border-color: rgba(56, 189, 248, 0.7);
-  box-shadow: 0 4px 20px rgba(56, 189, 248, 0.2);
+  box-shadow: 0 6px 24px -4px rgba(56, 189, 248, 0.35);
+  transform: translateY(-2px);
 }
 
-/* Smooth float keyframes */
-@keyframes float {
+.glass-button:active {
+  transform: translateY(0px) scale(0.98);
+}
+
+/* Smooth Float Animation */
+@keyframes floatSlow {
   0%, 100% {
-    transform: translateY(0px);
+    transform: translateY(0px) rotate(0deg);
   }
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-12px) rotate(1deg);
   }
 }
 
 .animate-float {
-  animation: float 6s ease-in-out infinite;
+  animation: floatSlow 6s ease-in-out infinite;
 }
 
-/* Custom scrollbar */
+/* Ambient Pulse Glow */
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.08);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
+/* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
