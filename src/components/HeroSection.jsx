@@ -2,6 +2,7 @@ import React from 'react';
 import { Download, ArrowRight, Mail, Sparkles, FolderCode, Layers, BookOpen } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
 import { GithubIcon, LinkedinIcon, WhatsappIcon, FacebookIcon } from './BrandIcons';
+import { getAssetUrl } from '../utils/getAssetUrl';
 
 export const HeroSection = ({ onExploreProjects, onContact }) => {
   return (
@@ -121,7 +122,7 @@ export const HeroSection = ({ onExploreProjects, onContact }) => {
               {/* Profile Glass Frame */}
               <div className="relative w-64 h-64 sm:w-80 sm:h-80 rounded-3xl overflow-hidden glass-panel border-2 border-accent/30 shadow-2xl p-2 bg-surface/80">
                 <img
-                  src={portfolioData.profileImageUrl}
+                  src={getAssetUrl(portfolioData.profileImageUrl)}
                   alt={portfolioData.developerName}
                   className="w-full h-full object-cover object-center rounded-2xl group-hover:scale-105 transition-transform duration-500"
                 />

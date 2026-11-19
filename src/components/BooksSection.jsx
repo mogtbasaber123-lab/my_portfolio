@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { BookOpen, GraduationCap, Monitor, Lightbulb, Info, Sparkles } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
+import { getAssetUrl } from '../utils/getAssetUrl';
 
 const iconMap = {
   Monitor: Monitor,
@@ -53,7 +54,7 @@ export const BooksSection = () => {
                     {/* Book Cover Image Container */}
                     <div className="w-full h-44 rounded-2xl overflow-hidden mb-4 bg-surface-light/40 border border-accent/20 flex items-center justify-center p-3 relative group-hover:scale-105 transition-transform duration-300">
                       <img
-                        src={book.coverUrl}
+                        src={getAssetUrl(book.coverUrl)}
                         alt={book.title}
                         className="max-h-full max-w-full object-contain rounded shadow-lg"
                       />

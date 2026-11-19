@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Coffee, Code, Smartphone, Flame, Database, CheckCircle2, ChevronRight, X, Info, Sparkles } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
+import { getAssetUrl } from '../utils/getAssetUrl';
 
 const iconMap = {
   Coffee: Coffee,
@@ -63,7 +64,7 @@ export const CoursesSection = () => {
                       <div className="w-12 h-12 rounded-2xl bg-surface/80 border border-accent/20 p-2 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
                         {course.logoUrl ? (
                           <img
-                            src={course.logoUrl}
+                            src={getAssetUrl(course.logoUrl)}
                             alt={course.title}
                             className="w-full h-full object-contain"
                           />
@@ -115,7 +116,7 @@ export const CoursesSection = () => {
                     <div className="flex items-center justify-between mb-3">
                       <div className="flex items-center gap-2">
                         <div className="w-8 h-8 rounded-xl bg-surface border border-accent/20 p-1 flex items-center justify-center">
-                          <img src={course.logoUrl} alt={course.title} className="w-full h-full object-contain" />
+                          <img src={getAssetUrl(course.logoUrl)} alt={course.title} className="w-full h-full object-contain" />
                         </div>
                         <span className="text-sm font-bold text-textPrimary">{course.title} Overview</span>
                       </div>
@@ -172,7 +173,7 @@ export const CoursesSection = () => {
 
               <div className="flex items-center gap-4 mb-4">
                 <div className="w-12 h-12 rounded-2xl bg-surface/90 border border-accent/20 p-2 flex items-center justify-center">
-                  <img src={selectedModalCourse.logoUrl} alt={selectedModalCourse.title} className="w-full h-full object-contain" />
+                  <img src={getAssetUrl(selectedModalCourse.logoUrl)} alt={selectedModalCourse.title} className="w-full h-full object-contain" />
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-textPrimary">{selectedModalCourse.title}</h3>
