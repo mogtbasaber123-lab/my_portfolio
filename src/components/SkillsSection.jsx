@@ -75,12 +75,12 @@ export const SkillsSection = () => {
                   />
                 </div>
 
-                {/* Hover / Tap Revealed Description Drawer */}
+                {/* Click / Tap Revealed Description Drawer */}
                 <div
                   className={`overflow-hidden transition-all duration-300 ${
                     isSelected
                       ? 'max-h-40 opacity-100 mt-4 pt-3 border-t border-accent/20'
-                      : 'max-h-0 opacity-0 group-hover:max-h-40 group-hover:opacity-100 group-hover:mt-4 group-hover:pt-3 group-hover:border-t group-hover:border-accent/20'
+                      : 'max-h-0 opacity-0'
                   }`}
                 >
                   <div className="flex items-start gap-2 text-xs text-textSecondary leading-relaxed">
@@ -88,11 +88,11 @@ export const SkillsSection = () => {
                   </div>
                 </div>
 
-                {/* Hover Indicator Hint */}
+                {/* Hint Indicator */}
                 <div className="flex items-center justify-between text-[11px] font-medium text-textMuted pt-1 group-hover:text-accent">
                   <span className="flex items-center gap-1">
                     <Info className="w-3 h-3" />
-                    <span>Hover or tap for details</span>
+                    <span>Click or tap to toggle details</span>
                   </span>
                 </div>
 
