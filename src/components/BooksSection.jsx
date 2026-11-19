@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BookOpen, GraduationCap, Monitor, Lightbulb, Info } from 'lucide-react';
+import { BookOpen, GraduationCap, Monitor, Lightbulb, Info, X } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
 import { getAssetUrl } from '../utils/getAssetUrl';
 
@@ -86,6 +86,10 @@ export const BooksSection = () => {
 
                 {/* Hover / Tap Revealed Summary Overlay Layer */}
                 <div
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    toggleBook(book.id);
+                  }}
                   className={`absolute inset-0 bg-surface/95 backdrop-blur-md p-6 flex flex-col justify-between border-2 border-accent/40 rounded-3xl transition-all duration-300 ${
                     isSelected
                       ? 'opacity-100 translate-y-0 pointer-events-auto'
@@ -100,7 +104,16 @@ export const BooksSection = () => {
                       >
                         Book Summary
                       </span>
-                      <IconComponent className="w-5 h-5 text-accent" />
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          toggleBook(book.id);
+                        }}
+                        className="p-1 rounded-lg bg-surface border border-accent/20 text-textSecondary hover:text-textPrimary"
+                        aria-label="Close book overlay"
+                      >
+                        <X className="w-4 h-4" />
+                      </button>
                     </div>
 
                     <h4 className="text-sm font-bold text-textPrimary mb-2 leading-snug">
@@ -114,7 +127,15 @@ export const BooksSection = () => {
 
                   <div className="pt-3 border-t border-accent/15 text-[11px] font-semibold text-accent flex items-center justify-between">
                     <span>Author: {book.author.split(',')[0]}</span>
-                    <span>Tap to close</span>
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        toggleBook(book.id);
+                      }}
+                      className="text-textSecondary font-semibold px-2 py-0.5 rounded bg-surface border border-accent/20 hover:text-textPrimary"
+                    >
+                      Close ✕
+                    </button>
                   </div>
                 </div>
 

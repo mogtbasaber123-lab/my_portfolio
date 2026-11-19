@@ -106,6 +106,10 @@ export const CoursesSection = () => {
 
                 {/* Hover / Touch Revealing Overlay */}
                 <div
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    toggleCourseCard(course.id);
+                  }}
                   className={`absolute inset-0 bg-surface/95 backdrop-blur-md p-6 flex flex-col justify-between border-2 border-accent/40 rounded-3xl transition-all duration-300 z-20 ${
                     isSelected
                       ? 'opacity-100 translate-y-0 pointer-events-auto'
@@ -120,6 +124,16 @@ export const CoursesSection = () => {
                         </div>
                         <span className="text-sm font-bold text-textPrimary">{course.title} Overview</span>
                       </div>
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          toggleCourseCard(course.id);
+                        }}
+                        className="p-1 rounded-lg bg-surface border border-accent/20 text-textSecondary hover:text-textPrimary"
+                        aria-label="Close card"
+                      >
+                        <X className="w-4 h-4" />
+                      </button>
                     </div>
 
                     <p className="text-xs text-textSecondary leading-relaxed mb-4">
@@ -149,7 +163,15 @@ export const CoursesSection = () => {
                     >
                       Open Full Dialog
                     </button>
-                    <span className="text-textMuted font-medium">Tap to close</span>
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        toggleCourseCard(course.id);
+                      }}
+                      className="text-textSecondary font-semibold px-2 py-0.5 rounded bg-surface border border-accent/20 hover:text-textPrimary"
+                    >
+                      Close ✕
+                    </button>
                   </div>
                 </div>
 
