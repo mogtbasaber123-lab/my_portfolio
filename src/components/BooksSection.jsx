@@ -79,21 +79,21 @@ export const BooksSection = () => {
                   <div className="pt-2 border-t border-accent/10 flex items-center justify-between text-[11px] font-medium text-textMuted group-hover:text-accent">
                     <span className="flex items-center gap-1">
                       <Info className="w-3.5 h-3.5" />
-                      <span>Hover or tap for summary</span>
+                      <span>Click or tap for summary</span>
                     </span>
                   </div>
                 </div>
 
-                {/* Hover / Tap Revealed Summary Overlay Layer */}
+                {/* Click / Tap Revealed Summary Overlay Layer */}
                 <div
                   onClick={(e) => {
                     e.stopPropagation();
                     toggleBook(book.id);
                   }}
-                  className={`absolute inset-0 bg-surface/95 backdrop-blur-md p-6 flex flex-col justify-between border-2 border-accent/40 rounded-3xl transition-all duration-300 ${
+                  className={`absolute inset-0 bg-surface/95 backdrop-blur-md p-6 flex flex-col justify-between border-2 border-accent/40 rounded-3xl transition-all duration-300 z-20 ${
                     isSelected
-                      ? 'opacity-100 translate-y-0 pointer-events-auto'
-                      : 'opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 pointer-events-none group-hover:pointer-events-auto'
+                      ? 'opacity-100 translate-y-0 pointer-events-auto shadow-2xl'
+                      : 'opacity-0 translate-y-4 pointer-events-none'
                   }`}
                 >
                   <div>

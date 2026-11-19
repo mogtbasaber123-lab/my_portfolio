@@ -98,13 +98,13 @@ export const CoursesSection = () => {
                   <div className="pt-3 border-t border-accent/10 flex items-center justify-between text-xs font-semibold text-accent group-hover:text-secondary">
                     <span className="flex items-center gap-1.5 text-[11px] font-medium text-textMuted group-hover:text-accent">
                       <Info className="w-3.5 h-3.5" />
-                      <span>Hover or tap for key concepts</span>
+                      <span>Click or tap to view details</span>
                     </span>
                     <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </div>
 
-                {/* Hover / Touch Revealing Overlay */}
+                {/* Click / Touch Revealing Overlay */}
                 <div
                   onClick={(e) => {
                     e.stopPropagation();
@@ -112,8 +112,8 @@ export const CoursesSection = () => {
                   }}
                   className={`absolute inset-0 bg-surface/95 backdrop-blur-md p-6 flex flex-col justify-between border-2 border-accent/40 rounded-3xl transition-all duration-300 z-20 ${
                     isSelected
-                      ? 'opacity-100 translate-y-0 pointer-events-auto'
-                      : 'opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 pointer-events-none group-hover:pointer-events-auto'
+                      ? 'opacity-100 translate-y-0 pointer-events-auto shadow-2xl'
+                      : 'opacity-0 translate-y-4 pointer-events-none'
                   }`}
                 >
                   <div>
