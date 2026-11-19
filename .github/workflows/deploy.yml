@@ -1,4 +1,4 @@
-name: Deploy Flutter Web to GitHub Pages
+name: Deploy React Web to GitHub Pages
 
 on:
   push:
@@ -16,27 +16,21 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Java JDK
-        uses: actions/setup-java@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          distribution: 'temurin'
-          java-version: '17'
-
-      - name: Setup Flutter SDK
-        uses: subosito/flutter-action@v2
-        with:
-          channel: 'stable'
-          cache: true
+          node-version: '20'
+          cache: 'npm'
 
       - name: Install dependencies
-        run: flutter pub get
+        run: npm ci
 
-      - name: Build Flutter Web
-        run: flutter build web --release --base-href "/my_portfolio/"
+      - name: Build React Vite app
+        run: npm run build
 
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build/web
+          publish_dir: ./dist
           publish_branch: gh-pages
