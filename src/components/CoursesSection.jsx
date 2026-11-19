@@ -124,16 +124,6 @@ export const CoursesSection = () => {
                         </div>
                         <span className="text-sm font-bold text-textPrimary">{course.title} Overview</span>
                       </div>
-                      <button
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          toggleCourseCard(course.id);
-                        }}
-                        className="p-1 rounded-lg bg-surface border border-accent/20 text-textSecondary hover:text-textPrimary"
-                        aria-label="Close card"
-                      >
-                        <X className="w-4 h-4" />
-                      </button>
                     </div>
 
                     <p className="text-xs text-textSecondary leading-relaxed mb-4">
@@ -153,7 +143,7 @@ export const CoursesSection = () => {
                     </ul>
                   </div>
 
-                  <div className="pt-3 border-t border-accent/15 flex items-center justify-between text-[11px]">
+                  <div className="pt-3 border-t border-accent/15 flex items-center justify-start text-[11px]">
                     <button
                       onClick={(e) => {
                         e.stopPropagation();
@@ -162,15 +152,6 @@ export const CoursesSection = () => {
                       className="text-accent font-semibold hover:underline"
                     >
                       Open Full Dialog
-                    </button>
-                    <button
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        toggleCourseCard(course.id);
-                      }}
-                      className="text-textSecondary font-semibold px-2 py-0.5 rounded bg-surface border border-accent/20 hover:text-textPrimary"
-                    >
-                      Close ✕
                     </button>
                   </div>
                 </div>

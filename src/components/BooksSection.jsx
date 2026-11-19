@@ -104,16 +104,6 @@ export const BooksSection = () => {
                       >
                         Book Summary
                       </span>
-                      <button
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          toggleBook(book.id);
-                        }}
-                        className="p-1 rounded-lg bg-surface border border-accent/20 text-textSecondary hover:text-textPrimary"
-                        aria-label="Close book overlay"
-                      >
-                        <X className="w-4 h-4" />
-                      </button>
                     </div>
 
                     <h4 className="text-sm font-bold text-textPrimary mb-2 leading-snug">
@@ -127,15 +117,6 @@ export const BooksSection = () => {
 
                   <div className="pt-3 border-t border-accent/15 text-[11px] font-semibold text-accent flex items-center justify-between">
                     <span>Author: {book.author.split(',')[0]}</span>
-                    <button
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        toggleBook(book.id);
-                      }}
-                      className="text-textSecondary font-semibold px-2 py-0.5 rounded bg-surface border border-accent/20 hover:text-textPrimary"
-                    >
-                      Close ✕
-                    </button>
                   </div>
                 </div>
 
