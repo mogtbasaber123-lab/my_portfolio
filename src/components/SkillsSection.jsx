@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Smartphone, Code, GitBranch, MessageSquare, Info, Sparkles } from 'lucide-react';
+import { Smartphone, Code, GitBranch, MessageSquare, Info } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
 
 const iconMap = {
@@ -84,7 +84,6 @@ export const SkillsSection = () => {
                   }`}
                 >
                   <div className="flex items-start gap-2 text-xs text-textSecondary leading-relaxed">
-                    <Sparkles className="w-4 h-4 text-accent shrink-0 mt-0.5" />
                     <p>{skill.description}</p>
                   </div>
                 </div>

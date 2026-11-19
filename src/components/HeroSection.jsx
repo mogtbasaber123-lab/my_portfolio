@@ -1,5 +1,5 @@
 import React from 'react';
-import { Download, ArrowRight, Mail, Sparkles, FolderCode, Layers, BookOpen } from 'lucide-react';
+import { Download, ArrowRight, Mail, FolderCode, Layers, BookOpen } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
 import { GithubIcon, LinkedinIcon, WhatsappIcon, FacebookIcon } from './BrandIcons';
 import { getAssetUrl } from '../utils/getAssetUrl';
@@ -15,7 +15,6 @@ export const HeroSection = ({ onExploreProjects, onContact }) => {
 
             {/* Status Badge */}
             <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full glass-panel border border-accent/30 text-accent text-xs font-semibold tracking-wide">
-              <Sparkles className="w-4 h-4 text-secondary animate-pulse" />
               <span>{portfolioData.title}</span>
             </div>
 

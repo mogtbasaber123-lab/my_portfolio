@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Coffee, Code, Smartphone, Flame, Database, CheckCircle2, ChevronRight, X, Info, Sparkles } from 'lucide-react';
+import { Coffee, Code, Smartphone, Flame, Database, CheckCircle2, ChevronRight, X, Info } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
 import { getAssetUrl } from '../utils/getAssetUrl';
 
@@ -120,7 +120,6 @@ export const CoursesSection = () => {
                         </div>
                         <span className="text-sm font-bold text-textPrimary">{course.title} Overview</span>
                       </div>
-                      <Sparkles className="w-4 h-4 text-accent" />
                     </div>
 
                     <p className="text-xs text-textSecondary leading-relaxed mb-4">

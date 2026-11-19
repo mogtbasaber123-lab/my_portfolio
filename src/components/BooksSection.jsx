@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BookOpen, GraduationCap, Monitor, Lightbulb, Info, Sparkles } from 'lucide-react';
+import { BookOpen, GraduationCap, Monitor, Lightbulb, Info } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
 import { getAssetUrl } from '../utils/getAssetUrl';
 
@@ -81,7 +81,6 @@ export const BooksSection = () => {
                       <Info className="w-3.5 h-3.5" />
                       <span>Hover or tap for summary</span>
                     </span>
-                    <Sparkles className="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity" />
                   </div>
                 </div>
 

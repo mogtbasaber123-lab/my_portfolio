@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Copy, Check, Send, Sparkles } from 'lucide-react';
+import { Mail, Copy, Check, Send } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
 import { GithubIcon, LinkedinIcon, WhatsappIcon, FacebookIcon } from './BrandIcons';
 
@@ -101,7 +101,6 @@ export const ContactSection = () => {
                   <span className="text-xs text-textSecondary">Professional Network</span>
                 </div>
               </div>
-              <Sparkles className="w-4 h-4 text-accent opacity-0 group-hover:opacity-100 transition-opacity" />
             </a>
 
             <a
@@ -121,7 +120,6 @@ export const ContactSection = () => {
                   <span className="text-xs text-textSecondary">Code Repositories</span>
                 </div>
               </div>
-              <Sparkles className="w-4 h-4 text-accent opacity-0 group-hover:opacity-100 transition-opacity" />
             </a>
 
             <a
@@ -141,7 +139,6 @@ export const ContactSection = () => {
                   <span className="text-xs text-textSecondary">Instant Messaging</span>
                 </div>
               </div>
-              <Sparkles className="w-4 h-4 text-accent opacity-0 group-hover:opacity-100 transition-opacity" />
             </a>
 
             <a
@@ -161,7 +158,6 @@ export const ContactSection = () => {
                   <span className="text-xs text-textSecondary">Social Profile</span>
                 </div>
               </div>
-              <Sparkles className="w-4 h-4 text-accent opacity-0 group-hover:opacity-100 transition-opacity" />
             </a>
           </div>
 
